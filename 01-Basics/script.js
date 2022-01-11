@@ -1,9 +1,5 @@
 
-// Declare Variable
-let variable = "String Variable";
-console.log(variable);
-
-// Primitive Variable
+// Primitive Types
 let age = 23; console.log(typeof age); //Number
 let name = "Peter"; console.log(typeof name);
 let flag = false; console.log(typeof flag);
@@ -13,7 +9,13 @@ let symbol = Symbol.for("Spade"); console.log(typeof symbol); //Symbol
 let zillion = BigInt("9374320"); console.log(typeof zillion); //BigInt
 //Note: Dynamic Type - Data Types are inferred. Value has the Type. Variable only points to a Value.
 
-// Object Variable
-let me = {
+// Declare Variable ( var / let / const )
+// var - legacy, avoid
+var variable = "Var Variable";
+// let - mutatable variable, block scope
+let mutable = "Variable";
+// const - constant, immutable variable
+const PI = 3.1415;
+// no declaration keyword
+// boo = "Boo"; // Valid but not recommended
 
-};
