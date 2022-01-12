@@ -19,3 +19,10 @@ const PI = 3.1415;
 // no declaration keyword
 // boo = "Boo"; // Valid but not recommended
 
+// Operators, Operator Precedence
+
+// Calculate BMI
+let mass = 78;
+let height = 1.69;
+let bmi = mass / height ** 2;
+console.log(bmi);
