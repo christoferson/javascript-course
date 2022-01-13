@@ -4,7 +4,7 @@ let age = 23; console.log(typeof age); //Number
 let name = "Peter"; console.log(typeof name);
 let flag = false; console.log(typeof flag);
 let count; console.log(typeof count); //Undefined
-let nothing = null; console.log(typeof nothing); //Null
+let nothing = null; console.log(typeof nothing); //Null. Note typeof null is object.
 let symbol = Symbol.for("Spade"); console.log(typeof symbol); //Symbol
 let zillion = BigInt("9374320"); console.log(typeof zillion); //BigInt
 //Note: Dynamic Type - Data Types are inferred. Value has the Type. Variable only points to a Value.
@@ -51,3 +51,17 @@ if (number > 50) {
 } else {
     console.log(`${number} is less than 25`);
 }
+
+// Type Conversion
+let ageString = "32";
+let ageNumber = Number(ageString); // Convert ageString to Number
+let ageNan = Number("ThirtyTwo"); // Cannot Convert to Number results to NaN. Note typeof NaN is number
+console.log(typeof ageString, ageString+1, typeof ageNumber, ageNumber+1, ageNan, typeof ageNan);
+
+let salaryNumber = 758.58;
+let salaryString = String(salaryNumber);
+console.log(typeof salaryNumber, salaryNumber+1, typeof salaryString, salaryString+1);
+
+// Type Coercion
+console.log("Following Number will be coerced to a String: " + 87 + ".");
+console.log("23" - "10" - 3, "23" + "10" - 3, "8" * "2", "8" / "2", "8" - "2", "8" + "2");
