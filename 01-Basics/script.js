@@ -20,9 +20,24 @@ const PI = 3.1415;
 // boo = "Boo"; // Valid but not recommended
 
 // Operators, Operator Precedence
+let sum = 87 + 12;
+let power = 3 ** 3;
+let quotient = 293 / 16;
+let average = (81 + 27 + 93) / 3;
+console.log(sum, power, quotient, average);
 
 // Calculate BMI
 let mass = 78;
 let height = 1.69;
 let bmi = mass / height ** 2;
 console.log(bmi);
+
+// Strings and Template Literals
+const email = "kratos@lightmail.com"
+const rendered = `Email: ${email}`; // String Interpolation - Substitute email variable placeholder 
+console.log(rendered);
+const multiline = `{
+    "status" : "Sent",
+    "message" : "Message from ${email}"
+}`;
+console.log(multiline);
