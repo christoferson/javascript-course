@@ -41,3 +41,13 @@ const multiline = `{
     "message" : "Message from ${email}"
 }`;
 console.log(multiline);
+
+// Conditionals - If/Else Statements
+const number = 65;
+if (number > 50) {
+    console.log(`${number} is greater than 50`);
+} else if (number > 25) {
+    console.log(`${number} is greater than 25`);
+} else {
+    console.log(`${number} is less than 25`);
+}
