@@ -65,3 +65,15 @@ console.log(typeof salaryNumber, salaryNumber+1, typeof salaryString, salaryStri
 // Type Coercion
 console.log("Following Number will be coerced to a String: " + 87 + ".");
 console.log("23" - "10" - 3, "23" + "10" - 3, "8" * "2", "8" / "2", "8" - "2", "8" + "2");
+
+// Truthy and Falsy Values
+console.log(Boolean(0), Boolean(""), Boolean(undefined), Boolean(null), Boolean(NaN)); // Falsy: 0, "", undefined, null, NaN
+console.log(Boolean("T"), Boolean("NotEmpty"), Boolean({}), Boolean(1));
+
+const balance = 1;
+if (balance) {
+    console.log(`Your current balance is ${balance}. Enter amount to withdraw.`);
+} else {
+    console.log("You currently have 0 balance.");
+}
+
