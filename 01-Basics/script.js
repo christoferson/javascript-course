@@ -95,3 +95,20 @@ if (efoo != 18) { console.log("efoo != 18.", efoo != 18); }
 else { console.log("efoo != 18 is false."); }
 if (efoo != "18") { console.log("efoo != '18'.", efoo != "18"); } // Loose Inequality. 18 string is converted to Number
 else { console.log("efoo != '18' is false."); }
+
+
+// Boolean Logic - And Or Not
+console.log("(10 > 58) && (17 > 5): ", (10 > 58) && (17 > 5));
+console.log("(10 > 58) || (17 > 5): ", (10 > 58) || (17 > 5));
+console.log("!(10 > 58) && (17 > 5): ", !(10 > 58) && (17 > 5));
+
+// Switch statement
+const day = "Monday";
+
+switch (day) {
+    case "Monday" : console.log("MON"); break;
+    case "Wednesday" : console.log("WED"); break;
+    case "Saturday" : 
+    case "Sunday" : console.log("WEEKEND"); break;
+    default : console.log("UNKNOWN"); break;
+};
