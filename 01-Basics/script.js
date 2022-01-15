@@ -77,3 +77,21 @@ if (balance) {
     console.log("You currently have 0 balance.");
 }
 
+// Equality Operators
+const efoo = 18;
+
+if (efoo === 18) { console.log("efoo === 18.", efoo === 18); } // Strict Equality. No Type Coercion.
+if (efoo === "18") { console.log("efoo === '18'.", efoo === "18"); } // Strict Equality. No Type Coercion.
+else { console.log("efoo === '18' is false"); }
+
+if (efoo == 18) { console.log("efoo == 18.", efoo == 18); }
+if (efoo == "18") { console.log("efoo == '18'.", efoo == "18"); } // Loose Equality. 18 string is converted to Number
+
+if (efoo !== 18) { console.log("efoo !== 18.", efoo !== 18); } // Strict Inequality. No Type Coercion.
+else { console.log("efoo !== 18 is false"); }
+if (efoo !== "18") { console.log("efoo !== '18'.", efoo !== "18"); } // Strict Inequality. No Type Coercion.
+
+if (efoo != 18) { console.log("efoo != 18.", efoo != 18); }
+else { console.log("efoo != 18 is false."); }
+if (efoo != "18") { console.log("efoo != '18'.", efoo != "18"); } // Loose Inequality. 18 string is converted to Number
+else { console.log("efoo != '18' is false."); }
