@@ -125,3 +125,9 @@ console.log(`Foo=${ternaryFoo}: ${ternary}`);
 const tipBill = 275;
 let tip = (tipBill >=30 && tipBill <= 300)? tipBill * 0.15 : tipBill * 0.2;
 console.log(`Bill=${tipBill} / Tip=${tip} / Total=${tipBill + tip}`);
+
+
+// Versions & Releases
+// ES5 ES2015, ES20016 -> ES2021 Yearly Release
+// Backward Compatible
+// Transpile ES6+ to ES5 using Babel for Compatibility
