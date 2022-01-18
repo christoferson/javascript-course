@@ -112,3 +112,16 @@ switch (day) {
     case "Sunday" : console.log("WEEKEND"); break;
     default : console.log("UNKNOWN"); break;
 };
+
+// Expressions / Statements
+console.log(`Expression (85 - 18 + 12) evaluates to: ${85 - 18 + 12}`); // Expression
+if (12 < 15) { console.log("Statement"); } // Statement
+
+// Conditional Ternary Operation
+const ternaryFoo = 27;
+let ternary = (ternaryFoo > 24)? "Foo > 24" : "Foo <= 24";
+console.log(`Foo=${ternaryFoo}: ${ternary}`);
+
+const tipBill = 275;
+let tip = (tipBill >=30 && tipBill <= 300)? tipBill * 0.15 : tipBill * 0.2;
+console.log(`Bill=${tipBill} / Tip=${tip} / Total=${tipBill + tip}`);
