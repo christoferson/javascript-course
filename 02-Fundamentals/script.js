@@ -38,3 +38,16 @@ const anonymousFunction = function(x,  y) {
 }
 
 console.log(anonymousFunction(5, 8));
+
+// Arrow Function
+
+const arrowFunction = (x, y) => `Arrow Function X=${x} Y=${y}`;
+
+console.log(arrowFunction(5, 8));
+
+const arrowFunctionVerbose = (x, y) => {
+    let z = x + y;
+    return `Arrow Function Verbose: X=${x} Y=${y} Z=${z}`;
+}
+
+console.log(arrowFunctionVerbose(5, 8));
