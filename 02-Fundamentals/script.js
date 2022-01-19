@@ -51,3 +51,18 @@ const arrowFunctionVerbose = (x, y) => {
 }
 
 console.log(arrowFunctionVerbose(5, 8));
+
+
+// Calling another function
+
+function helperFunction(z) {
+    return z * 2;
+}
+
+function entryFunction(x, y) {
+    const x2 = helperFunction(x);
+    const y2 = helperFunction(y);
+    return `Entry Function X=${x2} Y=${y2}`;
+}
+
+console.log(entryFunction(5, 8));
