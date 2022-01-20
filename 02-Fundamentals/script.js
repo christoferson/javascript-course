@@ -66,3 +66,16 @@ function entryFunction(x, y) {
 }
 
 console.log(entryFunction(5, 8));
+
+// Arrays
+const arrayYears = [2001, 2012, 2025];
+console.log(arrayYears, arrayYears.length, arrayYears[0]);
+
+const arrayNames = new Array("Mark", "Luke", "John");
+console.log(arrayNames, arrayNames.length, arrayNames[arrayNames.length-1]);
+arrayNames[0] = "Peter";
+console.log(arrayNames, arrayNames.length, arrayNames[arrayNames.length-1]);
+
+// Arrays - Bag
+const arrayBag = ["50.1", 38.1, true, "85.7"];
+console.log(arrayBag, arrayBag.length, arrayBag[arrayNames.length-1]);
