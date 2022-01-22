@@ -123,3 +123,18 @@ myObject["mail"] = "mail@xmail.com";
 console.log(myObject);
 
 console.log(myObject.jobs[0]);
+
+
+// Object with Methods
+
+const player = {
+    name: 'Kratos',
+    attack: function attack(monster) {
+        const msg = `Player ${this.name} attacks ${monster.name}.`;
+        console.log(msg);
+        return msg;
+    }
+};
+
+console.log(player.attack({name: "dragon"}));
+console.log(player['attack']({name: "dragon"}));
