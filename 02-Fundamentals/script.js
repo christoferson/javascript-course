@@ -79,3 +79,21 @@ console.log(arrayNames, arrayNames.length, arrayNames[arrayNames.length-1]);
 // Arrays - Bag
 const arrayBag = ["50.1", 38.1, true, "85.7"];
 console.log(arrayBag, arrayBag.length, arrayBag[arrayNames.length-1]);
+
+// Array Functions (Push, Unshift, Pop, Shift, IndexOf, includes)
+
+const mutableArray = ["Mark", "Luke", "John"];
+mutableArray.push("Peter");
+console.log(mutableArray);
+
+mutableArray.unshift("Adam");
+console.log(mutableArray);
+
+const popedElement = mutableArray.pop();
+console.log(mutableArray, popedElement);
+
+const shiftedElement = mutableArray.shift();
+console.log(mutableArray, shiftedElement);
+
+console.log(mutableArray.indexOf("Luke"));
+console.log(mutableArray.includes("Luke"));
