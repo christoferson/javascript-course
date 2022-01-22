@@ -97,3 +97,29 @@ console.log(mutableArray, shiftedElement);
 
 console.log(mutableArray.indexOf("Luke"));
 console.log(mutableArray.includes("Luke"));
+
+// Objects - Declaration
+
+const myObject = {
+    firstName: 'FirstName',
+    lastName: 'LastName',
+    age: 20,
+    jobs: ['Carpenter', 'Salesman', 'Worker']
+};
+
+// Object Dot and Bracket Notation
+
+console.log(myObject);
+console.log(myObject.firstName);
+console.log(myObject['firstName']);
+
+// Dynamic Access using Bracket Notation
+
+const myObjectAttribute = "firstName";
+console.log(myObject[myObjectAttribute]);
+
+myObject.location = "Peru";
+myObject["mail"] = "mail@xmail.com";
+console.log(myObject);
+
+console.log(myObject.jobs[0]);
