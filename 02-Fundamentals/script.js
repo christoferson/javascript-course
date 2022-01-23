@@ -156,3 +156,13 @@ for (let i = 0; i < loopValueList.length; i++) {
     }
 }
 console.log(loopTypeList);
+
+// Loops Nested
+
+const nestedLoopList = [[5, 6, 7], ["A", "B", "C"], [98, 12, 1]];
+
+for (let i = nestedLoopList.length - 1; i >= 0; i--) {
+    for (let j = 0; j < nestedLoopList[i].length; j++) {
+        console.log(`${nestedLoopList[i][j]} ${typeof nestedLoopList[i][j]}`);
+    }
+}
