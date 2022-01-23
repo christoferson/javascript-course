@@ -138,3 +138,21 @@ const player = {
 
 console.log(player.attack({name: "dragon"}));
 console.log(player['attack']({name: "dragon"}));
+
+// Loops
+
+for (let i = 0; i < 3; i++) {
+    console.log(`Loop ${i}`);
+}
+
+const loopValueList = [3, 7, "9", 18.5, {}];
+const loopTypeList = [];
+for (let i = 0; i < loopValueList.length; i++) {
+    console.log(`${loopValueList[i]} ${typeof loopValueList[i]}`);
+    
+    if (typeof loopValueList[i] === 'number') {
+        //loopTypeList[i] = typeof loopValueList[i];
+        loopTypeList.push(typeof loopValueList[i]);
+    }
+}
+console.log(loopTypeList);
