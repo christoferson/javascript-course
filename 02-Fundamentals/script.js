@@ -166,3 +166,12 @@ for (let i = nestedLoopList.length - 1; i >= 0; i--) {
         console.log(`${nestedLoopList[i][j]} ${typeof nestedLoopList[i][j]}`);
     }
 }
+
+// While Loop
+
+let diceRoll = 1;
+
+while (diceRoll < 3) {
+    diceRoll = Math.trunc(Math.random() * 6);
+    console.log(`Rolled ${diceRoll}`);
+}
