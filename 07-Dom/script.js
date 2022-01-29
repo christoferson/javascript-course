@@ -11,6 +11,8 @@ console.log(document.querySelector(".message").textContent);
 console.log(document.querySelector(".guess").value);
 document.querySelector(".guess").value = 23;
 
+// Guess Number Game
+
 let secretNumber = 0;
 
 let currentScore = 0;
@@ -25,6 +27,13 @@ const doInitializeGame = function() {
 
     currentScore = 10;
     document.querySelector(".score").textContent = currentScore;
+
+    const highScoreElement = document.querySelector(".highscore");
+    highScoreElement.style.color = "black";
+    highScoreElement.style.fontWeight = "normal";
+
+    const messageElement = document.querySelector(".message");
+    messageElement.textContent = "---";
 }
 
 doInitializeGame();
@@ -43,9 +52,13 @@ document.querySelector(".check").addEventListener("click", function() {
 
     if (guess === secretNumber) {
         messageElement.textContent = "Correct!";
+        document.querySelector(".number").textContent = secretNumber;
         if (currentScore > highScore) {
+            const highScoreElement = document.querySelector(".highscore");
             highScore = currentScore;
-            document.querySelector(".highscore").textContent = highScore;
+            highScoreElement.textContent = highScore;
+            highScoreElement.style.color = "blue";
+            highScoreElement.style.fontWeight = "bold";
         }
     } else {
         // Give Hint
