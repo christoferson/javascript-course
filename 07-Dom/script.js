@@ -5,21 +5,29 @@
 console.log(document.querySelector(".message"));
 console.log(document.querySelector(".message").textContent);
 
-document.querySelector(".message").textContent = "Yey!";
+document.querySelector(".message").textContent = "---";
 console.log(document.querySelector(".message").textContent);
 
 console.log(document.querySelector(".guess").value);
 document.querySelector(".guess").value = 23;
 
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(secretNumber);
-//document.querySelector(".number").textContent = secretNumber;
+let secretNumber = 0;
 
-let currentScore = 10;
-document.querySelector(".score").textContent = currentScore;
+let currentScore = 0;
 
 let highScore = 0;
 document.querySelector(".highscore").textContent = highScore;
+
+const doInitializeGame = function() {
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
+    console.log(secretNumber);
+    //document.querySelector(".number").textContent = secretNumber;
+
+    currentScore = 10;
+    document.querySelector(".score").textContent = currentScore;
+}
+
+doInitializeGame();
 
 // Handling Clicks
 document.querySelector(".check").addEventListener("click", function() {
@@ -55,4 +63,8 @@ document.querySelector(".check").addEventListener("click", function() {
         }
         scoreElement.textContent = currentScore;
     }
+});
+
+document.querySelector(".restart").addEventListener("click", function() {
+    doInitializeGame();
 });
