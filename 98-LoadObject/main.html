@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Load Object</title>
+    <script type="text/javascript" src="data.js"></script>
+</head>
+<body>
+
+    <div id="product_div"></div>
+
+    <script type="text/javascript">
+        for (let user in users) {
+            console.log(user);    
+        };
+        for (var i=0; i<users.length; i++) {
+            console.log(users[i].name);    
+        }
+
+    for (let i = 0; i < catalog.products.length; i++) {
+        //console.log(catalog.products[i]);
+        let product = catalog.products[i];
+        console.log(product);
+        for (let key in product) {
+            for (let j = 0; j < catalog.products[i][key].length; j++) {
+                console.log(catalog.products[i][key][j])
+            }
+        }
+    }
+
+    const productMap = Object.entries(products);
+    const productDiv = document.getElementById('product_div');
+    for (const [key, value] of productMap) {
+        let description = `${key}: ${value.name} ${value.price} ${value.currency}`;
+        console.log(description);
+        
+        productDiv.innerHTML += description + "<br/>";
+    }
+    productDiv.innerHTML +=  products["product1"].name;
+        
+    </script>
+</body>
+</html>
