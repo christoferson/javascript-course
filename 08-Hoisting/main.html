@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hoising</title>
+    <script>
+        'use strict';
+
+
+        // Variable Hoisting *****************************************************
+        console.log("Variable Hoisting *****************************************************");
+
+        // const variables are not hoisted
+        //console.log(`Job: ${job}`); //Uncaught ReferenceError: can't access lexical declaration 'job' before initialization
+        const job = "rogue";
+        console.log(`const variable: ${job}`);
+        // const cannot be re-assigned
+        //job = "wizard"; //Uncaught TypeError: invalid assignment to const 'job'
+        //console.log(job);
+
+        // const variables are not hoisted
+        //console.log(`let_variable: ${let_variable}`); //Uncaught ReferenceError: can't access lexical declaration 'let_variable' before initialization
+        let let_variable = "foo";
+        console.log(`let_variable: ${let_variable}`);
+        let_variable = "bar"; //let variables can be re-assigned
+        console.log(`let_variable: ${let_variable}`);
+
+        // var variables are hoisted
+        console.log(`var variable: ${var_variable}`); // var variable: undefined
+        var var_variable;
+        var_variable = "variable value";
+        console.log(`var variable: ${var_variable}`);
+
+        // var variables are declared as part of window object
+        console.log(`var variable property of window: ${var_variable === window.var_variable}`); //true
+
+        // undeclared variable results to error 
+        //console.log(`Undeclared Variable: ${undeclared_variable}`); //Uncaught ReferenceError: undeclared_variable is not defined
+
+        // Function Hoisting *****************************************************
+        console.log("Function Hoisting *****************************************************");
+
+        console.log(`function_declaration(before): ${function_declaration(5, 7)}`);
+
+        //console.log(`function_expression: ${function_expression(5, 7)}`); // Uncaught ReferenceError: can't access lexical declaration 'function_expression' before initialization
+
+        //console.log(`function_arrow_expression: ${function_arrow_expression(5, 7)}`); // Uncaught ReferenceError: can't access lexical declaration 'function_arrow_expression' before initialization
+
+        function function_declaration(a, b) { return a + b; };
+
+        const function_expression = function (a, b) { return a + b; };
+
+        const function_arrow_expression = (a, b) => { return a + b; };
+
+        console.log(`function_declaration(after): ${function_declaration(5, 7)}`);
+
+        console.log(`function_expression(after): ${function_expression(5, 7)}`);
+
+        console.log(`function_arrow_expression(after): ${function_arrow_expression(5, 7)}`); 
+
+    </script>
+</head>
+
+<body>
+<pre id="result">
+</pre>
+</body>
+
+</html>
