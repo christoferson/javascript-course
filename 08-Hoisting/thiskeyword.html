@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>This Keyword</title>
+    <script>
+        'use strict';
+
+        // Method - this refers to the enclosing object
+        const player = {
+            name: "conan",
+            hp: 10383,
+            ap: 2333,
+            attack : function () {
+                return this.ap * 1.31; 
+            }
+        }
+
+        console.log(player.attack());
+
+        // Simple function call - this is undefined
+
+        function foo() {
+            return "c " + this.bar; 
+            // strict mode - Uncaught TypeError: this is undefined
+            // normal mode - c undefined;
+        }
+
+        console.log(foo());
+
+        // Arror functions - lexical this
+
+        // Event Listerner - DOM element that the handler is attached to
+
+
+    </script>
+</head>
+
+<body>
+<pre id="result">
+</pre>
+</body>
+
+</html>
